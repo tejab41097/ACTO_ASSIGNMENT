@@ -5,9 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.imagesFrag.ImagesFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_images"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            android:textColor="#FFF"
+            android:background="#4F88D1"
+            android:text="IMAGES"
+            android:gravity="center_horizontal"
+            android:shadowDx="@android:integer/config_longAnimTime"
+            android:shadowDy="@android:integer/config_longAnimTime"
+            android:shadowRadius="@android:integer/config_longAnimTime"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_images"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
 
 </FrameLayout>

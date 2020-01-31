@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".ui.showImageFrag.ShowImageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TITLE :-    "
+                android:textColorHighlight="@color/colorPrimary"
+                android:padding="5dp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textViewPicTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TITLE"
+                android:layout_weight="0.7"
+                android:padding="5dp"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OWNER :-"
+                android:padding="5dp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textViewOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OWNER"
+                android:layout_weight="0.7"
+                android:padding="5dp"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALBUM :- "
+                android:padding="5dp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/textViewAlbumName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ALBUM"
+                android:layout_weight="0.7"
+                android:padding="5dp"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageViewFull"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    </LinearLayout>
+</FrameLayout>

@@ -2,7 +2,7 @@ package com.example.photoapplication.ui.albumsFrag
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.photoapplication.data.DatabaseRepository
+import com.example.photoapplication.data.OfflineDB.DatabaseRepository
 import com.example.photoapplication.repository.AlbumRepository
 
 

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.photoapplication.Coroutines.CoroutinesObject
-import com.example.photoapplication.data.DatabaseRepository
+import com.example.photoapplication.data.OfflineDB.DatabaseRepository
 import com.example.photoapplication.data.user.User
 import com.example.photoapplication.repository.UserRepository
 import kotlinx.coroutines.Job

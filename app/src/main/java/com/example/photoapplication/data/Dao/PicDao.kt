@@ -20,4 +20,7 @@ interface PicDao {
 
     @Query("SELECT * FROM pic")
     fun getAllPics() : List<Pic>
+
+    @Query("SELECT * FROM pic WHERE id = :picId")
+    fun getPicInfoByIdFromDb(picId: String) : Pic
 }

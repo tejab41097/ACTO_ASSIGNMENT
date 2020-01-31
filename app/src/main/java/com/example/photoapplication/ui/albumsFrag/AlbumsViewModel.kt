@@ -1,11 +1,10 @@
 package com.example.photoapplication.ui.albumsFrag
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.photoapplication.Coroutines.CoroutinesObject
-import com.example.photoapplication.data.DatabaseRepository
+import com.example.photoapplication.data.OfflineDB.DatabaseRepository
 import com.example.photoapplication.data.album.Album
 import com.example.photoapplication.repository.AlbumRepository
 import kotlinx.coroutines.Job
