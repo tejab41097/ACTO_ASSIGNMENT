@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.photoapplication.R
 import com.example.photoapplication.data.images.Pic
 import com.example.photoapplication.repository.GlideApp
+import com.example.photoapplication.ui.viewImageFrag.ViewImageFragment
+
 class PicAdapter(
     private val pics: List<Pic>,
     val netOn: Boolean = false
@@ -22,15 +24,15 @@ class PicAdapter(
 
         init {
 //            if(netOn) {
-//                itemView.setOnClickListener {
-//                    val activity = itemView.context as AppCompatActivity
-//                    val fragment = ShowImageFragment()
-//                    val args = Bundle()
-//                    args.putString("id", currentId)
-//                    fragment.arguments = args
-//                    activity.supportFragmentManager.beginTransaction()
-//                        .replace(R.id.fragment_holder, fragment).commit()
-//                }
+                itemView.setOnClickListener {
+                    val activity = itemView.context as AppCompatActivity
+                    val fragment = ViewImageFragment()
+                    val args = Bundle()
+                    args.putString("id", currentId)
+                    fragment.arguments = args
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_holder, fragment).addToBackStack(null).commit()
+                }
 //            }
         }
 
@@ -60,8 +62,8 @@ class PicAdapter(
     override fun onBindViewHolder(holder: PicViewHolder, position: Int) {
         val pic: Pic = pics[position]
         holder.textTitle.text = pic.title
+        holder.setData(pic.id.toString(),position)
         if(netOn){
-
             GlideApp.with(holder.itemView.context)
                 .load("${pics[position].url}.png")
                 .placeholder(R.drawable.offline_image)

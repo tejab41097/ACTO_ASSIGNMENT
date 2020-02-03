@@ -1,16 +1,16 @@
 package com.example.photoapplication.data.OfflineDB
 
 import android.content.Context
-import android.util.Log
 import com.example.photoapplication.data.Dao.AlbumDao
 import com.example.photoapplication.data.Dao.PicDao
 import com.example.photoapplication.data.Dao.UserDao
 import com.example.photoapplication.data.album.Album
 import com.example.photoapplication.data.images.Pic
+import com.example.photoapplication.data.join.PicAlbumUser
 import com.example.photoapplication.data.user.User
 
 class DatabaseRepository(context: Context) :
-    BaseDbRepository {
+        BaseDbRepository {
     private var userDao: UserDao
     private var albumDao: AlbumDao
     private var picDao: PicDao
@@ -21,15 +21,15 @@ class DatabaseRepository(context: Context) :
 
         fun getInstance(applicationContext: Context): DatabaseRepository {
             return INSTANCE
-                ?: DatabaseRepository(
-                    applicationContext
-                )
+                    ?: DatabaseRepository(
+                            applicationContext
+                    )
         }
     }
 
     init {
         val database: FullDb? =
-            FullDb(context)
+                FullDb(context)
         userDao = database!!.userDao()
         albumDao = database!!.albumDao()
         picDao = database!!.picDao()
@@ -60,8 +60,8 @@ class DatabaseRepository(context: Context) :
         picDao.saveAllPicsToDb(pics)
     }
 
-    override suspend fun getPicInfoByIdFromDb(picId: String): Pic{
-        return picDao.getPicInfoByIdFromDb(picId)
+    override suspend fun getImageDetailFromDb(imageId: String): PicAlbumUser {
+        return picDao.getPicInfoByIdFromDb(imageId)
     }
 
 

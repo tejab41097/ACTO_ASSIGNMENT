@@ -1,10 +1,9 @@
 package com.example.photoapplication.data.OfflineDB
 
-import androidx.lifecycle.LiveData
 import com.example.photoapplication.data.album.Album
 import com.example.photoapplication.data.images.Pic
+import com.example.photoapplication.data.join.PicAlbumUser
 import com.example.photoapplication.data.user.User
-import retrofit2.Response
 
 interface BaseDbRepository {
 
@@ -20,5 +19,5 @@ interface BaseDbRepository {
 
     suspend fun saveAllPicsToDb(pics: List<Pic>)
 
-    suspend fun getPicInfoByIdFromDb(picId: String): Pic
+    suspend fun getImageDetailFromDb(picId: String): PicAlbumUser
 }
