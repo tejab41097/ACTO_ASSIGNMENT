@@ -65,7 +65,7 @@ class PicAdapter(
         holder.setData(pic.id.toString(),position)
         if(netOn){
             GlideApp.with(holder.itemView.context)
-                .load("${pics[position].url}.png")
+                    .load("https://picsum.photos/200")    //.load(pics[position].url) will return image url but picDetails.url are not returning error so adding random image
                 .placeholder(R.drawable.offline_image)
                 .fitCenter()
                 .into(holder.picView)
