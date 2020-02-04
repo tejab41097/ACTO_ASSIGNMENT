@@ -31,8 +31,8 @@ class DatabaseRepository(context: Context) :
         val database: FullDb? =
                 FullDb(context)
         userDao = database!!.userDao()
-        albumDao = database!!.albumDao()
-        picDao = database!!.picDao()
+        albumDao = database.albumDao()
+        picDao = database.picDao()
     }
 
 
